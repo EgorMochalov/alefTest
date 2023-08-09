@@ -9,13 +9,14 @@ export const store = new Vuex.Store({
         storage: window.sessionStorage,
     })],
     state: {
-        data: { name: '', age: null,child:[] }
+        data: { name: '', age: '',child:[] }
     },
     mutations: {
         edit(state, newData) {
             state.data = newData
         }
     },
+    
     actions: {
         editData({ commit }, data) {
             commit("edit", data)
